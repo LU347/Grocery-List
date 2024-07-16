@@ -26,18 +26,18 @@ export default function Navbar() {
                 className="cursor-pointer filter brightness-0"
                 priority
             />
-            <h1>Grocery Buddy</h1>
+            <h1 className="text-emerald-600">Grocery Buddy</h1>
             </Link>
             <div className="hidden sm:flex">
                 <ul className="hidden sm:flex">
                     <Link href="/">
-                        <li className="ml-10 uppercase hover:border-b text-xl">Home</li>
+                        <li className="ml-10 uppercase hover:border-b text-xl text-emerald-700">Home</li>
                     </Link>
                     <Link href="/lists">
-                        <li className="ml-10 uppercase hover:border-b text-xl">Lists</li>
+                        <li className="ml-10 uppercase hover:border-b text-xl text-emerald-700">Lists</li>
                     </Link>
                     <Link href="/account">
-                        <li className="ml-10 uppercase hover:border-b text-xl">Account</li>
+                        <li className="ml-10 uppercase hover:border-b text-xl text-emerald-700">Account</li>
                     </Link>
                 </ul>
             </div>
