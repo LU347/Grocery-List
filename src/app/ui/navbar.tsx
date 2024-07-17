@@ -2,10 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../public/logo.svg";
+import Logo from "../../../public/icons/logoIcon";
 import Menu from "../../../public/menu.svg";
 import CloseButton from "../../../public/close.svg";
 import { useState } from "react";
+
+const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/lists', label: 'Lists' },
+    { href: '/account', label: 'Account' },
+  ];
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -18,27 +24,16 @@ export default function Navbar() {
     <nav className="fixed w-full h-24 shadow-xl bg-white">
         <div className="flex justify-between items-center h-full w-full px-4 2xl:px-16">
             <Link href='/' className="flex items-center">
-            <Image
-                src={Logo}
-                alt="Logo"
-                width="75"
-                height="75"
-                className="cursor-pointer filter brightness-0"
-                priority
-            />
-            <h1 className="text-emerald-600">Grocery Buddy</h1>
+            <Logo className="m-2"/>
+            <h1 className="test-2xl font-bold text-emerald-600 m-1">Grocery Buddy</h1>
             </Link>
             <div className="hidden sm:flex">
                 <ul className="hidden sm:flex">
-                    <Link href="/">
-                        <li className="ml-10 uppercase hover:border-b text-xl text-emerald-700">Home</li>
-                    </Link>
-                    <Link href="/lists">
-                        <li className="ml-10 uppercase hover:border-b text-xl text-emerald-700">Lists</li>
-                    </Link>
-                    <Link href="/account">
-                        <li className="ml-10 uppercase hover:border-b text-xl text-emerald-700">Account</li>
-                    </Link>
+                    {navItems.map((item, index) => (
+                        <Link key={index} href={item.href}>
+                            <li className="ml-10 uppercase hover:font-bold text-xl text-emerald-700 hover:border-b">{item.label}</li>
+                        </Link>
+                    ))}
                 </ul>
             </div>
             <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">

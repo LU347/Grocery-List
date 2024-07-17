@@ -9,11 +9,12 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <><Navbar />
-       <div className="h-screen flex flex-col">
-          <main className="mt-24 p-4 flex-grow"> {/* Adjust mt-24 based on your navbar height */}
+      <div className="h-screen flex flex-col lists-background">
+          <main className="mt-24 p-4 flex-grow">
               {children}
           </main>
-      </div></>
+      </div>
+    </>
   );
 };
 
