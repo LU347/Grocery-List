@@ -1,12 +1,10 @@
-// pages/account.tsx
-import Layout from '../components/layout/layout';
+import Layout from '../layout';
+import LoginForm from '@/app/ui/LoginForm';
 
-export default function AccountPage() {
-  return (
-    <Layout>
-      <div className="container mx-auto px-4 py-8">
-        <p>Account Page</p>
-      </div>
-    </Layout>
-  );
+export default function Account() {
+    return (
+        <Layout>
+            <LoginForm />
+        </Layout>
+    );
 }

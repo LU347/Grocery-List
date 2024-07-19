@@ -26,14 +26,6 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.lists-background {
-  background-color: #eef7f1;
-  opacity: 1;
-  background-image:  radial-gradient(#198022 1.5px, transparent 1.5px), radial-gradient(#198022 1.5px, #eef7f1 1.5px);
-  background-size: 60px 60px;
-  background-position: 0 0,30px 30px;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
